@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giga Quiz!</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./src/quiz.js" defer></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Welcome to Giga Quiz!</h1>
+        </header>
+        <div class="quiz-window">
+            <div class="settings">
+                <div class="category" id="category">
+                    <h2>Choose a category:</h2>
+                    <div class="category-list">
+                        <div class="list-item" id="category-vehicles" onClick="ContinueToDifficulty(28)">
+                            <h3>VEHICLES</h3>
+                        </div>
+                        <div class="list-item" id="category-history" onClick="ContinueToDifficulty(23)">
+                            <h3>HISTORY</h3>
+                        </div>
+                        <div class="list-item" id="category-sports" onClick="ContinueToDifficulty(21)">
+                            <h3>SPORTS</h3>
+                        </div>
+                        <div class="list-item" id="category-animals" onClick="ContinueToDifficulty(27)">
+                            <h3>ANIMALS</h3>
+                        </div>
+                        <div class="list-item" id="category-geography" onClick="ContinueToDifficulty(22)">
+                            <h3>GEOGRAPHY</h3>
+                        </div>
+                        <div class="list-item" id="category-general" onClick="ContinueToDifficulty(9)">
+                            <h3>GENERAL KNOWLEDGE</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="difficulty" id="difficulty">
+                    <h2>Choose a difficulty:</h2>
+                    <div class="difficulty-list">
+                        <div class="list-item" id="difficulty-easy" onClick="ContinueToStart('easy')">
+                            <h3>EASY</h3>
+                        </div>
+                        <div class="list-item" id="difficulty-medium" onClick="ContinueToStart('medium')">
+                            <h3>MEDIUM</h3>
+                        </div>
+                        <div class="list-item" id="difficulty-hard" onClick="ContinueToStart('hard')">
+                            <h3>HARD</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="game" id="game">
+                <p id="question-id">1 / 10</p>
+                <p id="question"></p>
+                <div class="answers" id="answers">
+
+                </div>
+                <p id="score">Score: </p>
+                <button id="btn-next" onClick="NextQuestion()">Next Question</button>
+            </div>
+            <div class="game-over" id="game-over">
+                <p>Quiz Over!</p>
+                <p>You have answered correctly <span id="correct-answers" style="color:yellow"></span> times out of
+                    <span id="question-count" style="color:yellow"></span>! <br>Your final score is: <span
+                        id="final-score" style="color:yellow;font-style:italic;"> points</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
